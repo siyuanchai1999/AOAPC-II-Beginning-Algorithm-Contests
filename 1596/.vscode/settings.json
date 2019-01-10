@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "iosfwd": "cpp",
+        "iostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled",
+    "workbench.colorTheme": "Monokai"
+}
