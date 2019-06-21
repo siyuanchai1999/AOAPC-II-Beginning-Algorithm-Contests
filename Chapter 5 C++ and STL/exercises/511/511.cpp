@@ -7,6 +7,8 @@ A more intuitive way of implementation is flip the greater than and smaller than
 The example can be found on https://github.com/morris821028/UVa/blob/master/volume005/511%20-%20Do%20You%20Know%20the%20Way%20to%20San%20Jose.cpp.
  */
 
+
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
