@@ -1,3 +1,17 @@
+/*
+A pretty complicated question but the OJ is not very finicky.
+Intuitively, we define two struct named task and staff. Task contains a queue of time points that new job is available for allocation.
+The staff is sorted based on the order specified in the question (implemented by overloading < operator).
+We select the first staff in the sorted order and check if there's job availabe.
+When earlyJobTime > avTime, there's no work for the current staff to do, so he will possibly be free until earlyJobTime, and we set avTime to be earlyjobTime.
+Otherwise, he will select the available job based on his priority list, and we assign the most preferred job to him. After this operation, every staff needs to update its earliest jobtime and jobid. 
+We remove a staff from the vector when there are not going to be any jobs that he can handle
+
+The answer is inspired by https://xienaoban.github.io/posts/16231.html in some aspects. 
+Please note that the answer on Udebug is wrong. 
+ */
+
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -37,6 +51,8 @@ struct staff
         }
     }
 
+
+    //set earlyJobTime and earlyJobId to the next job that comes at earliest time
     void setEarliestJob(unordered_map<int, task> &id2task){
         int eJob = id2task[skills[0]].getNext(), curJob;
         int eJobId = skills[0];
@@ -51,6 +67,7 @@ struct staff
         earlyJobTime = eJob;
         earlyJobId = eJobId;
     }
+
     void setPiriority(unordered_map<int, task> &id2task){
         int topJobTime;
         for (unsigned i = 0; i < skills.size(); i++)
@@ -113,7 +130,6 @@ int main(){
         {
             sort(workers.begin(), workers.end());
             staff *topStaff = &workers[0];
-            // pq.pop();
             if(topStaff->earlyJobTime > topStaff->avTime) // no job is coming
             {
                 topStaff->avTime = topStaff->earlyJobTime;
@@ -136,11 +152,9 @@ int main(){
                     // cout << "staff " << workers[i].sid << " has earlyjobtime " << workers[i].earlyJobTime <<  " available at " << workers[i].avTime <<  endl; 
                     if(workers[i].earlyJobTime == INTMAX){
                         // cout << "Remove " << workers[i].sid << " from list" << endl;
-                        
                         workers.erase(workers.begin() + i);
                          //remove elements in vector in the loop needs to handle the iterator correctly
                         i--;
-
                     }
                 }
                 
