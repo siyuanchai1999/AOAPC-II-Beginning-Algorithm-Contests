@@ -1,3 +1,10 @@
+/*
+This is the question that requires some attention while reading the specifications. 
+I use two priority queues to track the order with highest/lowest price; two different comparator was passed to the pq to maintain priority requirement of buy and sell orders.
+To make it easier to print the QUOTE two map from price to totalsize are used. The map is updated whenever any order is changed in trade, added to the orderbook or canceled.
+
+ */
+
 #include <iostream>
 #include <queue>
 #include <unordered_set>
