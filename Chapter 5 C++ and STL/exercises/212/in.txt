@@ -1,0 +1,61 @@
+10 30 01 16 15 1 30 
+Jones 
+90 140 
+Smith 
+10 200 
+Thompson 
+60 75 
+Albright 
+40 82 
+Poucher 
+33 209 
+Comer 
+10 201 
+Perry 
+3 188 
+Page 
+111 120 
+Roggio 
+69 100 
+Brigham 
+42 79 
+Nute 
+22 71 
+Young 
+38 50 
+Bush 
+26 40 
+Cates 
+120 32 
+Johnson 
+10 2 
+Jones 
+28 140 
+Smith 
+120 200 
+Thompson 
+23 75 
+Albright 
+19 82 
+Poucher 
+133 209 
+Comer 
+74 101 
+Perry 
+93 188 
+Page 
+111 223 
+Roggio 
+69 122 
+Brigham 
+42 79 
+Nute 
+22 71 
+Young 
+38 140 
+Bush 
+26 121 
+Cates 
+120 248 
+Johnson 
+10 50
