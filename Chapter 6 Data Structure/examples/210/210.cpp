@@ -1,3 +1,8 @@
+/*
+The book leaves enough hint for this problem. For each test case, we have a deque (double end queue) readyQ to store the next programs to run. All commands for each program is stored in a vector of queue. 
+We also a vector called truthtable to store the values of variables and a blockQ to store the blocked program. Note that if a program is finished or it is thrown to the end of blockQ, it should be put back to the end of readyQ. 
+ */
+
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -17,11 +22,6 @@ struct statement
     cmd type;
     char var;
     int val;
-
-    string toString(){
-        return to_string(type) + " " + var + " " + to_string(val);
-       
-    }
 };
 
 
