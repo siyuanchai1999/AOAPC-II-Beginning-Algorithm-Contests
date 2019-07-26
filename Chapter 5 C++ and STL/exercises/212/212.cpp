@@ -15,7 +15,6 @@ Several tips for the question:
 #include <queue>
 #include <iomanip>
 #include <unordered_map>
-
 using namespace std;
 
 struct patient
