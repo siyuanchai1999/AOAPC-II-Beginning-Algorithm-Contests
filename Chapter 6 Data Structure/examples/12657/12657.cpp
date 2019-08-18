@@ -144,14 +144,11 @@ struct dlist
 
 };
 
-
-
-
 int main(){
     int n, m, cmd, x, y;
     int caseNum = 0;
-    while (cin >> n >> m)
-    {
+
+    while (cin >> n >> m){
         dlist curlist = dlist(n);
         // curlist.display();
         while(m-- > 0){
