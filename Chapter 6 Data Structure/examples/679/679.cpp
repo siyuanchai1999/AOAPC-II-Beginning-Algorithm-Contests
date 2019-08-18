@@ -19,7 +19,7 @@ int main(){
     // cout << "maxD = " << maxD << endl;
     // cout << "maxI = " << maxI << endl;
      
-    vector<bool> tree(pow(2, maxD + 1), false);
+    vector<bool> tree(pow(2, maxD), false);
     vector<vector<int>> lookup(maxI + 1, vector<int>(maxD + 1) );
     for(unsigned i = 1; i < lookup.size(); i++){
         int pos = 1;
