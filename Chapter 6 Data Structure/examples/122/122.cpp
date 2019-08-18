@@ -77,6 +77,15 @@ struct binaryTree{
             cout << endl;
         }
     }
+
+
+    //call on root;
+    void free(node* curNode){
+        if(curNode == NULL) return;
+        free(curNode->left);
+        free(curNode->right);
+        delete curNode;
+    }
 };
 
 
@@ -89,6 +98,7 @@ int main(){
         if(input[1] == ')'){
             bt.traverse();
             complete = true;
+            bt.free(bt.root);
             bt = binaryTree();
         }else if(complete){
             size_t commaPos = input.find(',');
